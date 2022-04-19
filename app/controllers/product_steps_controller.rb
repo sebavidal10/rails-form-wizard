@@ -11,7 +11,6 @@
 
     def update
       product.update(product_steps_params)
-      
       render_wizard @product
     end
 
