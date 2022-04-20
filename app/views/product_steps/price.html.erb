@@ -1,7 +1,7 @@
 <%= form_with(model: @product, url: wizard_path, local: true) do |f| %>
-    <%= f.label :price %>
-    <%= f.text_field :price %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
 
-    <%= link_to 'Atrás', previous_wizard_path %>
-    <%= f.submit 'Siguiente' %>
-  <% end %>
+  <%= link_to 'Atrás', previous_wizard_path %>
+  <%= f.submit 'Siguiente' %>
+<% end %>
