@@ -232,6 +232,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   cells-erb
   cells-rails
+  erbse
   jbuilder (~> 2.7)
   listen (~> 3.3)
   puma (~> 5.0)

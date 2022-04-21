@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'wicked'
 gem "cells-rails"
 gem 'cells-erb'
+gem 'erbse'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

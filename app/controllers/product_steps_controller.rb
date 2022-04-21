@@ -7,26 +7,26 @@
 
     def show
       # con views
-      # render_wizard
+      render_wizard
 
       # con cells
-      render_cell 'product_step', @product, action: :name
+      # render_cell 'product_step', @product, action: :name
     end
 
     def update
       product.update(product_steps_params)
       # con views
-      # render_wizard @product
+      render_wizard @product
       
       # con cells
-      if params[:step] == 'end'
-        if @product.name == ''
-          @product.destroy
-        end
-        redirect_to root_path
-      else
-        render_cell 'product_step', @product, action: params[:step]
-      end
+      # if params[:step] == 'end'
+      #   if @product.name == ''
+      #     @product.destroy
+      #   end
+      #   redirect_to root_path
+      # else
+      #   render_cell 'product_step', @product, action: params[:step]
+      # end
     end
 
     def finish_wizard_path
