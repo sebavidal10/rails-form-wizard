@@ -1,6 +1,8 @@
 <%= form_with(model: @product, url: wizard_path, local: true) do |f| %>
   <%= f.label :color %>
   <%= f.text_field :color %>
-  <%= link_to 'Atrás', previous_wizard_path %>
-  <%= f.submit 'Siguiente' %>
+  <br/>
+  <%= link_to 'Back', previous_wizard_path %>
+  <%= f.submit 'End' %>
 <% end %>
+

@@ -1,5 +1,6 @@
 <%= form_with(model: @product, url: wizard_path, local: true) do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-    <%= f.submit 'Siguiente' %>
+    <br/>
+    <%= f.submit 'Next' %>
 <% end %>

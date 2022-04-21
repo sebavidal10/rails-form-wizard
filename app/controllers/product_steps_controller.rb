@@ -6,7 +6,8 @@
     steps :name, :price, :color
 
     def show
-      render_wizard
+      # render_wizard
+      render_cell 'product_step', @products, action: :name, path: wizard_path
     end
 
     def update
