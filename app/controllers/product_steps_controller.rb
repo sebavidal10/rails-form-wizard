@@ -6,17 +6,34 @@
     steps :name, :price, :color
 
     def show
+      # con views
       # render_wizard
-      render_cell 'product_step', @products, action: :name, path: wizard_path
+
+      # con cells
+      render_cell 'product_step', @product, action: :name
     end
 
     def update
       product.update(product_steps_params)
-      render_wizard @product
+      # con views
+      # render_wizard @product
+      
+      # con cells
+      if params[:step] == 'end'
+        if @product.name == ''
+          @product.destroy
+        end
+        redirect_to root_path
+      else
+        render_cell 'product_step', @product, action: params[:step]
+      end
     end
 
     def finish_wizard_path
-        product_path(product)
+      if @product.name == ''
+        @product.destroy
+      end
+      root_path
     end
 
     private

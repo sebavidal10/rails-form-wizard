@@ -5,4 +5,7 @@ Rails.application.routes.draw do
     resources :product_steps, only: [:show, :update]
   end
 
+  # custom para usar cells
+  post 'products/:product_id/product_steps/:step' => 'product_steps#update'
+
 end

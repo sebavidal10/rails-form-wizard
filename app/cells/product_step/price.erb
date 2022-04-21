@@ -1,1 +1,12 @@
-Price
+<h2>Form</h2>
+<h4>Step 2/3</h4>
+<p>
+  Name: <%= Product.find(params[:product_id]).name %>
+</p>
+<%= form_with(model: @product, url: '/products/'+params['product_id']+'/product_steps/color', local: true) do |f| %>
+  <%= f.label :price %>
+  <input type="text" name="product[price]" id="product_price">
+  <br/>
+  <%= link_to 'Back', '/products/'+params['product_id']+'/product_steps/name' %>
+  <%= f.submit 'Next' %>
+<% end %>

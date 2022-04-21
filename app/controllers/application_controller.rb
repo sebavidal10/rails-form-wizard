@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     the_cell = cell(cell_name, model, **args, &block)
     @html_head_title = the_cell.try :title
     html_content = the_cell.send(action)
-    render html: html_content, layout: layout
+    render html: html_content.html_safe, layout: layout
   end
 
   # debe seguir el formato de [cells-rails]/lib/cell/rails.rb

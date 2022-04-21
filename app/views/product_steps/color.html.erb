@@ -1,3 +1,9 @@
+<h2>Form</h2>
+<h4>Step 3/3</h4>
+<p>
+  Name: <%= @product.name %><br/>
+  Price: <%= @product.price %>
+</p>
 <%= form_with(model: @product, url: wizard_path, local: true) do |f| %>
   <%= f.label :color %>
   <%= f.text_field :color %>

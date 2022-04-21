@@ -5,7 +5,6 @@ class ProductsController < ApplicationController
     
     def create
         product = Product.create
-    
         redirect_to product_product_step_path(product, :name)
     end
 
