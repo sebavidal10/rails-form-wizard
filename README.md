@@ -1,3 +1,3 @@
 # Form Wizard
 
-Prueba de concepto de formulario wizard (paso a paso) con almacenamiento y persistencia entre cada una de las pantallas (pasos)
+Wizard (step by step) with storage and persistence between each of the screens (steps)
